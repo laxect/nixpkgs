@@ -10,16 +10,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "steam-tui";
-  version = "0.1.0";
+  version = "0.2.1";
 
   src = fetchFromGitHub {
     owner = "dmadisetti";
     repo = pname;
     rev = version;
-    sha256 = "sha256-UTXYlPecv0MVonr9zZwfwopfC/Fdch/ZSCxqgUsem40=";
+    sha256 = "sha256-01vWrtpH4vP9EZ4/YEdUNFldcPqntqH5Pb8j5ovBvc8=";
   };
 
-  cargoSha256 = "sha256-VYBzwDLSV4N4qt2dNgIS399T2HIbPTdQ2rDIeheLlfo=";
+  cargoSha256 = "sha256-MN5x1b0kFJrxETZJhtI6qCRUpGPj0y+0XKW1VvIVFHk=";
 
   buildInputs = [ steamcmd ]
     ++ lib.optional withWine wine;
